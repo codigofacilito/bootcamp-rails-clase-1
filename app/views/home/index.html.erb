@@ -1,0 +1,18 @@
+<% nombre = "Uriel" %>
+
+<h1>Hola <%= @nombre %></h1>
+<%if nombre == "Uriel"%>
+  <p>Equipo de Código Facilito</p>
+<%end%>
+
+<% @skills.each do |skill| %>
+  <p> <%= skill %> </p>
+<%end%>
+
+<%10.times do |i|%>
+  <p><%= i %></p>
+<%end%>
+
+<p> 4 </p>
+
+<a href="<%= root_path %>"> Home </a>
