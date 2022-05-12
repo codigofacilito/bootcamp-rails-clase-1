@@ -1,8 +1,28 @@
-<h1>Estas son tus skills registradas</h1>
-<ul>
-  <%@skills.each do |skill| %>
-    <li><%= skill %></li>
-  <%end%>
-</ul>
-
-<%= link_to "Nuevos Skills", skills_new_path() %>
+<div class="columns is-mobile mt-4">
+  <div class="column is-half is-offset-one-quarter">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          Estas son tus skills registradas
+        </p>
+        <button class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <div class="tags are-medium">
+            <%@skills.each do |skill| %>
+              <span class="tag"><%= skill %></span>
+            <%end%>
+          </div>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to "Crear nuevos skills", skills_new_path(), :class => "card-footer-item" %>
+      </footer>
+    </div>
+  </div>
+</div>

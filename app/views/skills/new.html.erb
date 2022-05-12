@@ -1,10 +1,19 @@
-<h1>Comparte tus skills</h1>
-<%= form_with url: "/skills/show", data:{turbo: "false"} do |f| %>
-
-  <div>
-    <%= f.label :skills, "Coloca tus skills separadas por coma" %>
-    <%= f.text_field :skills, placeholder: "ruby, js, css" %>
+<div class="columns is-mobile mt-4">
+  <div class="column is-half is-offset-one-quarter">
+    <h2 class="subtitle">Comparte tus skills</h2>
+    <%= form_with url: "/skills/show", data:{turbo: "false"} do |f| %>
+      <div class="field">
+        <%= f.label :skills, "Coloca tus skills separados por coma", :class => "label"%>
+        <div class="control">
+          <%= f.text_field :skills, required: true, :class => "input" %>
+        </div>
+        <p class="help">Ejm: ruby, js, css, php</p>
+      </div>
+      <div class="field">
+        <div class="control">
+          <%= f.submit "Enviar", :class => "button is-link" %>
+        </div>
+      </div>
+    <%end%>
   </div>
-
-  <%= f.submit "Enviar" %>
-<%end%>
+</div>
