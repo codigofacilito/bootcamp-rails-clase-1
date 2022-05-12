@@ -1,8 +1,4 @@
 <%=  form_with url: "/saludos/create", data: {turbo: "false"} do |f| %>
-
-<!-- Aquí va el contenido del form -->
-
-<%= f.text_field :nombre %>
-<%= f.submit "Enviar" %>
-
+  <%= f.text_field :nombre %>
+  <%= f.submit "Enviar" %>
 <%end%>

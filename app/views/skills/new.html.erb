@@ -1,0 +1,10 @@
+<h1>Comparte tus skills</h1>
+<%= form_with url: "/skills/show", data:{turbo: "false"} do |f| %>
+
+  <div>
+    <%= f.label :skills, "Coloca tus skills separadas por coma" %>
+    <%= f.text_field :skills, placeholder: "ruby, js, css" %>
+  </div>
+
+  <%= f.submit "Enviar" %>
+<%end%>
